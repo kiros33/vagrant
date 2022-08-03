@@ -23,6 +23,8 @@ Vagrant.configure("2") do |config|
   config.vm.network "public_network" , bridge: "en0: Wi-Fi"
 
   config.vm.provision "shell", path: "Initialize.ps1", privileged: true
+  config.vm.provision "shell", path: "Install-Chocolatey.ps1", privileged: true
+  config.vm.provision "shell", path: "Install-Basic.ps1", privileged: true
 
   # Disable automatic box update checking. If you disable this, then
   # boxes will only be checked for updates when the user runs
