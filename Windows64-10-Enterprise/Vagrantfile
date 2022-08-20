@@ -29,8 +29,8 @@ Vagrant.configure("2") do |config|
 
   config.vm.provision "shell", path: "Initialize.ps1", privileged: true
   config.vm.provision "shell", path: "Install-Chocolatey.ps1", privileged: true
-  # config.vm.provision "shell", path: "Install-Basic-01.ps1", privileged: true
-  # config.vm.provision "shell", inline: "echo Rebooting...", reboot: true
+  config.vm.provision "shell", path: "Install-Basic-01.ps1", privileged: true
+  config.vm.provision "shell", inline: "echo Rebooting...", reboot: true
   config.vm.provision "shell", path: "Install-Basic-02.ps1", privileged: true
 
   # Disable automatic box update checking. If you disable this, then
