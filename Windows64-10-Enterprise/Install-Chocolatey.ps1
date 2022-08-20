@@ -10,6 +10,9 @@ If((Test-Path "$env:ChocolateyInstall\choco.exe") -eq $False) {
 	Catch {
 		Write-Error -Message $_.Exception.Message
 	}
+	Finally {
+		$error.clear()
+	}
 }
 Else {
 	Write-Output "Chocolatey is already installed"
@@ -26,6 +29,9 @@ If((Test-Path "$env:ChocolateyInstall\choco.exe") -eq $True) {
 	}
 	Catch {
 		Write-Error -Message $_.Exception.Message
+	}
+	Finally {
+		$error.clear()
 	}
 }
 Else {
