@@ -23,7 +23,6 @@ If((Test-Path "$env:ChocolateyInstall\choco.exe") -eq $True) {
 
 		Set-ExecutionPolicy Bypass -Scope Process -Force;
 		choco upgrade -y all
-#		choco install -y chocolatey-windowsupdate.extension
 	}
 	Catch {
 		Write-Error -Message $_.Exception.Message

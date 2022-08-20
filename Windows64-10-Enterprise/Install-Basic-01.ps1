@@ -5,17 +5,6 @@ If((Test-Path "$env:ChocolateyInstall\choco.exe") -eq $True) {
 		Write-Output "Install basic programs via Chocolatey"
 
 		Set-ExecutionPolicy Bypass -Scope Process -Force;
-		choco install -y d2codingfont
-		choco install -y 7zip
-	}
-	Catch {
-		Write-Error -Message $_.Exception.Message
-	}
-
-	Try {
-		Write-Output "Install basic programs via Chocolatey"
-
-		Set-ExecutionPolicy Bypass -Scope Process -Force;
 		choco install -y microsoft-windows-terminal
 	}
 	Catch {
