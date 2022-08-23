@@ -7,6 +7,9 @@ If((Test-Path "$env:ChocolateyInstall\choco.exe") -eq $True) {
 		Set-ExecutionPolicy Bypass -Scope Process -Force;
 		choco install -y d2codingfont
 		choco install -y 7zip
+		choco install -y everything
+		choco install -y jq
+		choco install -y curl
 	}
 	Catch {
 		Write-Error -Message $_.Exception.Message
