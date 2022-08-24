@@ -1,13 +1,13 @@
 Write-Output "========================================"
 Write-Output "Trying to install basic programs step 04"
 
-If((Test-Path "$env:ChocolateyInstall\choco.exe") -eq $True) {
-	Write-Output ("  " + "Chocolatey is installed")
+If((Test-Path "$env:LOCALAPPDATA\Microsoft\WindowsApps\winget.exe") -eq $True) {
+	Write-Output ("  " + "App Installer is installed")
 	Try {
-		Write-Output ("  " + "Install basic programs step 04 via Chocolatey");
+		Write-Output ("  " + "Install basic programs step 04 via App Installer");
 		Set-ExecutionPolicy Bypass -Scope Process -Force;
 		
-		Write-Output ("  " + "Uninstall unneccessary software")
+		Write-Output ("  " + "Uninstall unnecessary software")
 		winget uninstall Microsoft.Xbox.TCUI_8wekyb3d8bbwe
 		winget uninstall Microsoft.XboxApp_8wekyb3d8bbwe
 		winget uninstall Microsoft.XboxIdentityProvider_8wekyb3d8bbwe
@@ -23,5 +23,5 @@ If((Test-Path "$env:ChocolateyInstall\choco.exe") -eq $True) {
 	}
 }
 Else {
-	Write-Output ("  " + "Chocolatey is not installed")
+	Write-Output ("  " + "App Installer is not installed")
 }
