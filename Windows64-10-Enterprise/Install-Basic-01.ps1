@@ -1,8 +1,13 @@
-Write-Output "Trying to install basic programs"
+Write-Output "========================================"
+Write-Output "Trying to install basic programs step 01"
+
 If((Test-Path "$env:ChocolateyInstall\choco.exe") -eq $True) {
-	Write-Output "Chocolatey is installed"
+	Write-Output ("  " + "Chocolatey is installed")
 	Try {
-		Write-Output "Install basic programs step 03 via Chocolatey"
+		Write-Output ("  " + "Install basic programs step 01 via Chocolatey")
+		
+		Write-Output ("  " + "Installing Prerequisites")
+		choco install -y curl
 
 		Set-ExecutionPolicy Bypass -Scope Process -Force;
 		$DownloadFilename = "Microsoft.VCLibs.x64.14.00.Desktop.appx"
@@ -16,5 +21,5 @@ If((Test-Path "$env:ChocolateyInstall\choco.exe") -eq $True) {
 	}
 }
 Else {
-	Write-Output "Chocolatey is not installed"
+	Write-Output ("  " + "Chocolatey is not installed")
 }
