@@ -10,7 +10,7 @@ If((Test-Path "$env:ChocolateyInstall\choco.exe") -eq $True) {
 		choco install -y d2codingfont
 		choco install -y 7zip
 		choco install -y everything
-		choco install -y jq
+		choco install -y qdir
 		choco install -y sublimetext4
 		choco install -y oh-my-posh
 		choco install -y terminal-icons.powershell
