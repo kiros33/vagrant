@@ -8,12 +8,13 @@ If((Test-Path "$env:ChocolateyInstall\choco.exe") -eq $True) {
 
 		Set-ExecutionPolicy Bypass -Scope Process -Force;
 		choco install -y d2codingfont
-		choco install -y 7zip
+		choco install -y 7zip unrar
 		choco install -y everything
 		choco install -y qdir
 		choco install -y sublimetext4
 		choco install -y oh-my-posh
 		choco install -y terminal-icons.powershell
+		choco install -y pyenv-win
 	}
 	Catch {
 		Write-Error -Message $_.Exception.Message
