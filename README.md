@@ -34,6 +34,7 @@ vagrant snapshot restore 20221106011528
 
 ### TO-DO
 * 7zip 설정
+* 윈도우 언어에 한글 추가
 
 ### IDA Pro
 * python
