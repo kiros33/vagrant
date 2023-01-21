@@ -15,6 +15,8 @@ If((Test-Path "$env:ChocolateyInstall\choco.exe") -eq $True) {
 		choco install -y oh-my-posh
 		choco install -y terminal-icons.powershell
 		choco install -y pyenv-win
+		choco install -y git
+		choco install -y copyq
 	}
 	Catch {
 		Write-Error -Message $_.Exception.Message
